@@ -1,0 +1,78 @@
+body{
+    background-image : url(./Images/LakeSideView.jpg);
+    color:white;
+}
+.modal-div{
+    display:flex;
+    justify-content:center;
+}
+.gen-div{
+    margin-left: 44%;    
+}
+
+.data-div{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.rmv-all-div{
+  display:flex;
+  flex-direction:column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  width: 180px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.rmv-all-button{
+    height:50px;
+    font-size:1.3em;
+}
+.input-div{
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 50px 50px;
+  justify-content: center;
+  margin-top:5px;
+}
+
+.input-1{
+    margin: 0px 15px 15px 0px;
+    width: 150px;
+}
+
+.add-button{
+    margin: 0px 15px 15px 20px;
+    width: 159px;
+    font-size:1.3em;
+}
+
+.item{
+    background-color: rgba(0,0,0,0.5);
+    border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    margin-top:5px;
+    font-size:1.3em;
+}
+
+.rmv-div{
+    width:25px;
+    border-radius:50px;
+    border:none;
+    background-color: rgba(255,255,255,0);
+    transform: translateX(700%);
+    transition:all ease .04s;
+}
+.rmv-div :hover{
+    background-color: rgba(225,235,240,0.3);
+    border-radius:5px;
+}
