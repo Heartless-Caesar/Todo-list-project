@@ -3,6 +3,8 @@ import { useState, useReducer } from 'react';
 import { Modal } from './Modal';
 import { Data } from './Data';
 import { reducer } from './reducer';
+import Button from "@material-ui/core/Button";
+import MuiInput from "@material-ui/core/Input"
 import './index.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 
@@ -22,18 +24,20 @@ export const Index = () => {
     }
     return(
         <>
+        <div className="main-div">
          <div className="modal-div">
            {state.modalContent && (<Modal modalContent={state.modalContent}/>)}
          </div>
          <form onSubmit={submitHandler}>
-             <div className="input-div">
-                 <input type='text' value={name} className="input-1" onChange={(e) => setName(e.target.value)}/>
-                 <button type="submit" className="add-button">Add</button>
+             <div  className="input-div">
+                 <MuiInput placeholder="Insert text" type='text' value={name} className="input-1" onChange={(e) => setName(e.target.value)}/>
+                 <Button variant="contained" color="primary" type="submit" className="add-button">Add</Button>
             </div>
          </form>
-         <div className="rmv-all-div">
-           <button type="button" className="rmv-all-button" onClick={() => dispatch({type : "REMOVE_ALL"})}>Remove all</button>
-         </div>
+          <div className="rmv-all-div">
+            <Button variant="contained" color="primary" type="button" className="rmv-all-button" onClick={() => dispatch({type : "REMOVE_ALL"})}>Remove all</Button>
+           </div>
+         </div> 
          <div className="data-div">
          {state.people.map((person) => {
           const {id, name} = person
